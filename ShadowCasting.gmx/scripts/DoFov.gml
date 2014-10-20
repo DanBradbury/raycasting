@@ -7,10 +7,16 @@ oy = mouse_norm_y+0.5;
 for(i=0;i<25;i++)
   {
   plot(round(ox),round(oy));
+
   //catch block
   if(o_map.block[# round(ox), round(oy)]==1){
-    return '';
+    o_map.block[# round(ox), round(oy)]=2; 
   }
+  if(o_map.block[# round(ox), round(oy)]==2){
+    return 'block';
+  }
+
   ox += argument[0];
   oy += argument[1];
   }
+return 'complete';

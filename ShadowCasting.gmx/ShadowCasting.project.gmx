@@ -11,6 +11,9 @@
   <scripts name="scripts">
     <script>scripts\plot.gml</script>
     <script>scripts\DoFov.gml</script>
+    <script>scripts\map_create.gml</script>
+    <script>scripts\map_step.gml</script>
+    <script>scripts\map_draw.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -22,7 +25,7 @@
     <room>rooms\room0</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41908.2402954282</constant>
+    <constant name="GM_build_date">41932.1948131944</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
