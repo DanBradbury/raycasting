@@ -10,8 +10,8 @@ for(i=0;i<101;i++){
   }
 }
 
-mouse_norm_x = round(mouse_x/8);
-mouse_norm_y = round(mouse_y/8);
+mouse_norm_x = floor(mouse_x/o_map.BLOCK_SIZE);
+mouse_norm_y = floor(mouse_y/o_map.BLOCK_SIZE);
 
 var i = 0;
 

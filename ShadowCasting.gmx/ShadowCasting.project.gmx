@@ -5,7 +5,11 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\dirt</sprite>
+    <sprite>sprites\wall</sprite>
+    <sprite>sprites\player</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -25,7 +29,7 @@
     <room>rooms\room0</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41932.1948131944</constant>
+    <constant name="GM_build_date">41932.2829643866</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

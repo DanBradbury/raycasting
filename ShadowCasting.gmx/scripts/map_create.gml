@@ -1,5 +1,6 @@
 light = ds_grid_create(101,101);
 block = ds_grid_create(101,101);
+BLOCK_SIZE = 32;
 
 ds_grid_clear(block,0);
 
@@ -18,3 +19,4 @@ for(i=0;i<200;i++)
   block[# dx-1, dy+1] = 1;
   }
 ds_grid_clear(light,0);
+
