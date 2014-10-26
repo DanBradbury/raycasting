@@ -15,10 +15,10 @@ for(i=0;i<argument[4];i++)
   plot(floor(ox),floor(oy));
 
   //catch block
-  if(o_map.block[# floor(ox), floor(oy)].type==1||o_map.block[# floor(ox), floor(oy)].type==3){
+  if(o_map.block[# floor(ox), floor(oy)].type==1 || o_map.block[# floor(ox), floor(oy)].type==3){
     o_map.block[# floor(ox), floor(oy)].type=2; 
   }
-  if(o_map.block[# floor(ox), floor(oy)]==2){
+  if(o_map.block[# floor(ox), floor(oy)].type==2){
     return 'block';
   }
 
