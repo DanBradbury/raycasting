@@ -10,15 +10,25 @@ for(i=0;i<101;i++){
   }
 }
 
-mouse_norm_x = floor(mouse_x/o_map.BLOCK_SIZE);
-mouse_norm_y = floor(mouse_y/o_map.BLOCK_SIZE);
+mouse_norm_x = PLAYER_LOC[0];
+mouse_norm_y = PLAYER_LOC[1];
 
 var i = 0;
-
 for(i=0;i<=360;i++){
   rad = i*pi/180;
   dx = cos(rad);
   dy = sin(rad);
-  DoFov(dx,dy);
+  DoFov(dx,dy,mouse_norm_x,mouse_norm_y,5);
+}
+
+/* keybaord control */
+if(keyboard_check_pressed(vk_up)){
+  PLAYER_LOC[1] -= 1;
+}else if(keyboard_check_pressed(vk_down)){
+  PLAYER_LOC[1] += 1;
+}else if(keyboard_check_pressed(vk_right)){
+  PLAYER_LOC[0] += 1;
+}else if(keyboard_check_pressed(vk_left)){
+  PLAYER_LOC[0] -= 1;
 }
 

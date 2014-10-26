@@ -18,6 +18,8 @@
     <script>scripts\map_create.gml</script>
     <script>scripts\map_step.gml</script>
     <script>scripts\map_draw.gml</script>
+    <script>scripts\generate_level.gml</script>
+    <script>scripts\Coord.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -29,8 +31,8 @@
     <room>rooms\room0</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41932.2829643866</constant>
-    <constant name="GM_version">'1.0.0.0'</constant>
+    <constant name="GM_build_date">41938.818522338</constant>
+    <constant name="GM_version">'100'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

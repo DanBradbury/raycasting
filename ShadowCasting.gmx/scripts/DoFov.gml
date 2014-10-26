@@ -1,10 +1,16 @@
-mouse_norm_x = floor(mouse_x/o_map.BLOCK_SIZE);
-mouse_norm_y = floor(mouse_y/o_map.BLOCK_SIZE);
+/* CALLED BY - map_step
+ * argument0 - x position to increment
+ * argument1 - y position to increment
+ * argument2 - normalized x position to go from
+ * argument3 - normalized y position to go from
+ * argument4 - ray size
 
-ox = mouse_norm_x+0.5;
-oy = mouse_norm_y+0.5;
+ */
 
-for(i=0;i<25;i++)
+ox = argument[2]+0.5;
+oy = argument[3]+0.5;
+
+for(i=0;i<argument[4];i++)
   {
   plot(floor(ox),floor(oy));
 

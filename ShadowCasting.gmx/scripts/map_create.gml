@@ -2,21 +2,9 @@ light = ds_grid_create(101,101);
 block = ds_grid_create(101,101);
 BLOCK_SIZE = 32;
 
-ds_grid_clear(block,0);
+PLAYER_LOC = Coord(floor((room_width/2)/o_map.BLOCK_SIZE),floor((room_height/2)/o_map.BLOCK_SIZE));
 
-for(i=0;i<200;i++)
-  {
-  dx = irandom_range(0,100);
-  dy = irandom_range(0,100);
-  block[# dx, dy] = 1;
-  block[# dx+1, dy] = 1;
-  block[# dx-1, dy] = 1;
-  block[# dx, dy-1] = 1;
-  block[# dx+1, dy-1] = 1;
-  block[# dx-1, dy-1] = 1;
-  block[# dx, dy+1] = 1;
-  block[# dx+1, dy+1] = 1;
-  block[# dx-1, dy+1] = 1;
-  }
+generate_level();
+
 ds_grid_clear(light,0);
 
