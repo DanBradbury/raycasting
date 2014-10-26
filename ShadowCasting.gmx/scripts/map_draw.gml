@@ -22,10 +22,10 @@ for(i=0;i<ds_grid_width(light)*BLOCK_SIZE ;i+=BLOCK_SIZE )
     draw_set_alpha(1);
     }
   }
-mouse_norm_x = PLAYER_LOC[0];
-mouse_norm_y = PLAYER_LOC[1]; 
+mouse_norm_x = o_player.PLAYER_LOC[0];
+mouse_norm_y = o_player.PLAYER_LOC[1]; 
 draw_sprite(player,0,mouse_norm_x*BLOCK_SIZE,mouse_norm_y*BLOCK_SIZE);
   
 draw_set_color(c_red);
-draw_text(5,5,"FPS: "+string(fps));
+draw_text(view_xview[0]+5,view_yview[0]+5,"FPS: "+string(fps));
 

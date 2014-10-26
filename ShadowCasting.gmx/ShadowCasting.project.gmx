@@ -20,19 +20,22 @@
     <script>scripts\map_draw.gml</script>
     <script>scripts\generate_level.gml</script>
     <script>scripts\Coord.gml</script>
+    <script>scripts\player_create.gml</script>
+    <script>scripts\player_step.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
   <objects name="objects">
     <object>objects\o_map</object>
+    <object>objects\o_player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41938.818522338</constant>
-    <constant name="GM_version">'100'</constant>
+    <constant name="GM_build_date">41938.8291898032</constant>
+    <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
