@@ -1,21 +1,30 @@
 with(o_map){
-  ds_grid_clear(block,0);
+  //ds_grid_clear(block,instance_create(0,0,o_block));
+  for(i=0;i<101;i++){
+    for(j=0;j<101;j++){
+        temp = instance_create(0,0,o_block);
+        temp.coord_x = i;
+        temp.coord_y = j;
+        block[# i, j] = temp;
+    }
+  }
+
 
   var dx;
   var dy;
-  for(i=0;i<89;i++)
+  for(i=0;i<99;i++)
     {
     dx = irandom_range(0,100);
     dy = irandom_range(0,100);
-    block[# dx, dy] = 1;
-    block[# dx+1, dy] = 1;
-    block[# dx-1, dy] = 1;
-    block[# dx, dy-1] = 1;
-    block[# dx+1, dy-1] = 1;
-    block[# dx-1, dy-1] = 1;
-    block[# dx, dy+1] = 1;
-    block[# dx+1, dy+1] = 1;
-    block[# dx-1, dy+1] = 1;
+    block[# dx, dy].type=1;
+    block[# dx+1, dy].type=1;
+    block[# dx-1, dy].type=1;
+    block[# dx, dy-1].type=1;
+    block[# dx+1, dy-1].type=1;
+    block[# dx-1, dy-1].type=1;
+    block[# dx, dy+1].type=1;
+    block[# dx+1, dy+1].type=1;
+    block[# dx-1, dy+1].type=1;
     }
 }
 

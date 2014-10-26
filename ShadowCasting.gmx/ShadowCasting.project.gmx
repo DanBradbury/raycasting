@@ -22,6 +22,8 @@
     <script>scripts\Coord.gml</script>
     <script>scripts\player_create.gml</script>
     <script>scripts\player_step.gml</script>
+    <script>scripts\block_step.gml</script>
+    <script>scripts\block_create.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -29,12 +31,13 @@
   <objects name="objects">
     <object>objects\o_map</object>
     <object>objects\o_player</object>
+    <object>objects\o_block</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41938.8291898032</constant>
+    <constant name="GM_build_date">41938.9083590393</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

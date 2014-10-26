@@ -18,6 +18,6 @@ for(i=0;i<=360;i++){
   rad = i*pi/180;
   dx = cos(rad);
   dy = sin(rad);
-  DoFov(dx,dy,mouse_norm_x,mouse_norm_y,5);
+  DoFov(dx,dy,mouse_norm_x,mouse_norm_y,8);
 }
 

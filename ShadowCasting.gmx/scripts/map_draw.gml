@@ -12,14 +12,18 @@ for(i=0;i<ds_grid_width(light)*BLOCK_SIZE ;i+=BLOCK_SIZE )
     }
     
     // draw blocks
-    if(block[# norm_x, norm_y]==2){
+    draw_set_alpha(1);
+    if(block[# norm_x, norm_y].type==2){
       draw_sprite(wall,0,i,j);
+    }else if(block[# norm_x, norm_y].type==3){
+      draw_sprite(wall,0,i,j);
+      draw_set_alpha(0.5);
+      draw_rectangle(i,j,i+BLOCK_SIZE ,j+BLOCK_SIZE,false);
     }else if(light[# norm_x, norm_y]==1){
       draw_sprite(dirt,0,i,j);
     }else{
       draw_rectangle(i,j,i+BLOCK_SIZE ,j+BLOCK_SIZE,false);
     }
-    draw_set_alpha(1);
     }
   }
 mouse_norm_x = o_player.PLAYER_LOC[0];
