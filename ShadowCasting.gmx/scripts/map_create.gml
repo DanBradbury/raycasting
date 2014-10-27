@@ -1,6 +1,10 @@
-light = ds_grid_create(101,101);
-block = ds_grid_create(101,101);
 BLOCK_SIZE = 32;
+
+map_width = room_width/BLOCK_SIZE;
+map_height = room_height/BLOCK_SIZE;
+
+light = ds_grid_create(map_width,map_height);
+block = ds_grid_create(map_width,map_height);
 
 generate_level();
 

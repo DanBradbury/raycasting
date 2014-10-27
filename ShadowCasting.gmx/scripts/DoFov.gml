@@ -12,17 +12,21 @@ oy = argument[3]+0.5;
 
 for(i=0;i<argument[4];i++)
   {
-  plot(floor(ox),floor(oy));
+  fox = floor(ox);
+  foy = floor(oy);
 
   //catch block
-  if(IsWall(floor(ox), floor(oy))){
-    o_map.block[# floor(ox), floor(oy)].type=2; 
-  }
-  if(o_map.block[# floor(ox), floor(oy)].type==2){
-    return 'block';
-  }
+  if(fox>=0 && fox < o_map.map_width && foy>=0 && foy<o_map.map_height){
+    plot(fox,foy);
+    if(IsWall(fox, foy)){
+      o_map.block[# fox, foy].type=2; 
+    }
+    if(o_map.block[# fox, foy].type==2){
+      return 'block';
+    }
 
-  ox += argument[0];
-  oy += argument[1];
+    ox += argument[0];
+    oy += argument[1];
+  }
   }
 return 'complete';
