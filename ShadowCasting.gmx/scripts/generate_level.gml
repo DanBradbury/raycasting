@@ -9,13 +9,15 @@ with(o_map){
     }
   }
 
+  //create perimeter
+  create_premiter();
 
   var dx;
   var dy;
-  for(i=0;i<99;i++)
+  for(i=0;i<9;i++)
     {
-    dx = irandom_range(0,100);
-    dy = irandom_range(0,100);
+    dx = irandom_range(0,map_width);
+    dy = irandom_range(0,map_height);
     block[# dx, dy].type=1;
     block[# dx+1, dy].type=1;
     block[# dx-1, dy].type=1;
