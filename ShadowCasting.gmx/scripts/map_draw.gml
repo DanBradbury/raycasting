@@ -19,7 +19,7 @@ for(i=0;i<ds_grid_width(light)*BLOCK_SIZE ;i+=BLOCK_SIZE )
       draw_sprite(wall,0,i,j);
       draw_set_alpha(0.5);
       draw_rectangle(i,j,i+BLOCK_SIZE ,j+BLOCK_SIZE,false);
-    }else if((block[# norm_x, norm_y].type==0||block[# norm_x, norm_y].type==4) && light[# norm_x, norm_y]==1){
+    }else if(!IsWall(norm_x, norm_y) && light[# norm_x, norm_y]==1){
       draw_sprite(dirt,0,i,j);
     }else if(block[# norm_x, norm_y].type==4){
       draw_sprite(dirt,0,i,j);
