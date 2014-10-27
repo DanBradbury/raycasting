@@ -32,6 +32,8 @@ for(i=0;i<ds_grid_width(light)*BLOCK_SIZE ;i+=BLOCK_SIZE )
   }
 mouse_norm_x = o_player.PLAYER_LOC[0];
 mouse_norm_y = o_player.PLAYER_LOC[1]; 
+
+draw_set_alpha(1);
 draw_sprite(player,0,mouse_norm_x*BLOCK_SIZE,mouse_norm_y*BLOCK_SIZE);
   
 draw_set_color(c_red);
