@@ -39,3 +39,9 @@ draw_sprite(player,0,mouse_norm_x*BLOCK_SIZE,mouse_norm_y*BLOCK_SIZE);
 draw_set_color(c_red);
 draw_text(view_xview[0]+5,view_yview[0]+5,"FPS: "+string(fps));
 
+draw_set_color(c_purple);
+draw_line_width(view_xview[0],view_yview[0]+view_hview[0]-150,view_xview[0]+view_wview[0],view_yview[0]+view_hview[0]-150, 10);
+draw_line_width(view_xview[0]+150,view_yview[0],view_xview[0]+150,view_yview[0]+view_hview[0]-150,10);
+draw_set_color(c_black);
+draw_rectangle(view_xview[0],5+view_yview[0]+view_hview[0]-150,view_xview[0]+view_wview[0],view_yview[0]+view_hview[0],false);
+draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+150-5,view_yview[0]+view_hview[0]-150-5,false);
